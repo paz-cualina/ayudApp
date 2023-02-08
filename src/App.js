@@ -9,17 +9,17 @@ import './App.css';
 function App() {
   return (
     
-    <>
-    <img src={logoAyudapp} className="logo" /><NavBar />
+    <div className='page'>
+      <img src={logoAyudapp} className="logo" /><NavBar />
 
-    <section className="wrapper">
+      <section className="wrapper">
 
-      <Banner />
-      <FiltersBar />
-      <ItemListContainer greeting={"Bienvenido/a a AyudApp"} />
+        <Banner />
+        <FiltersBar />
+        <ItemListContainer greeting={"Bienvenido/a a AyudApp 😻🐶"} />
 
-    </section>
-    </>
+      </section>
+    </div>
 
   );
 }
