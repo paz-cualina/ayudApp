@@ -1,4 +1,5 @@
 import CartWidget from './CartWidget/CartWidget';
+import heart from './../../assets/img/heart.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
@@ -19,8 +20,11 @@ export default function NavBar() {
                     </li>
                 </ul>
                 <div className="right">
-                    <a href="/">❤ Favoritos</a>
-                    <CartWidget /><a href="/">Solidario</a>
+                    <a href="/">
+                        <img src={heart} />
+                        Lista de espera
+                    </a>
+                    <CartWidget />
                 </div>
             </div>
         </div>

@@ -10,7 +10,8 @@ function App() {
   return (
     
     <div className='page'>
-      <img src={logoAyudapp} className="logo" /><NavBar />
+      <img src={logoAyudapp} className="logo" />
+      <NavBar />
 
       <section className="wrapper">
 

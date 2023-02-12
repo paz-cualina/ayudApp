@@ -1,22 +1,4 @@
-.banner {
-    background: rgba(255, 255, 255, 0.65);
-    padding: 30px 40px;
-    margin-top: 30px;
-}
-.banner .textWrapper {
-    color: #A555EC;
-    text-align: center;
-    max-width: 730px;
-    margin: 0 auto;
-}
-.banner .textWrapper h3 {
-    text-transform: uppercase;
-    font-weight: 600;
-    padding-bottom: 10px;
-}
-.banner .hola {
-    color: #A555EC;
-}
-.banner i {
-    color: red;
-}
+.banner { background: rgba(255, 255, 255, 0.65);  padding: 30px 40px; margin-top: 30px; position: relative; }
+.banner .textWrapper { color: #A555EC; text-align: center; max-width: 730px; margin: 0 auto; }
+.banner .textWrapper h3 { text-transform: uppercase; font-weight: 600; padding-bottom: 10px; }
+.banner img { position:absolute; right: 30px; top: 50%; transform: translateY(-50%); width: 70px; }

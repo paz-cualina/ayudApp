@@ -1,76 +1,17 @@
-.navBar { 
-    background: #D09CFA;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    height: 60px;
-    width: 100%;
-}
-.navBar .wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: inherit;
-}
-.navBar .wrapper ul {
-    display: flex;
-    align-items: center;
-}
-.navBar .wrapper ul li {
-    text-transform: uppercase;
-    padding-right: 20px;
-}
-.navBar .wrapper ul li.categories {
-    position: relative;
-}
-.navBar .wrapper ul li.categories ul {
-    display: none;
-}
-.navBar .wrapper ul li.categories ul li {
-    color: #404040;
-    text-decoration: none; 
-    padding-bottom: 8px;
-}
-.navBar .wrapper ul li.categories ul li:last-of-type {
-    padding-bottom: 0;
-}
-.navBar .wrapper ul li.categories ul li:hover {
-    font-weight: 600;
-    cursor: pointer;
-}
-.navBar .wrapper ul li.categories:hover ul {
-    display: block;
-    position: absolute;
-    top: 20px;
-    left: 0;
-    background-color: #fff;
-    border-radius: 8px;
-    width: 130px;
-    height: auto;
-    padding: 12px;
-    box-shadow: 0px 16px 20px 5px #cccccc0d;
-}
-.navBar .wrapper ul li a { 
-    color: #fff;
-    text-decoration: none; 
-    font-weight: 500;
-}
-.navBar .wrapper ul li a:hover {
-    text-decoration: underline;
-}
-.navBar .wrapper .right {
-    display: flex;
-    align-items: center;
-}
-.navBar .wrapper .right a {
-    color: #fff;
-    font-weight: 500;
-    text-decoration: none; 
-    text-transform: uppercase;
-}
-.navBar .wrapper .right a:first-of-type {
-    margin-right: 20px;
-}
-.navBar .wrapper .right a:hover {
-    text-decoration: underline;
-}
+.navBar { background: #D09CFA; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); height: 60px; width: 100%; }
+.navBar .wrapper { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; height: inherit; }
+.navBar .wrapper ul { display: flex; align-items: center; }
+.navBar .wrapper ul li { text-transform: uppercase; padding-right: 20px; }
+.navBar .wrapper ul li.categories { position: relative; }
+.navBar .wrapper ul li.categories ul { display: none; }
+.navBar .wrapper ul li.categories ul li { color: #404040; text-decoration: none; padding-bottom: 8px; }
+.navBar .wrapper ul li.categories ul li:last-of-type { padding-bottom: 0; }
+.navBar .wrapper ul li.categories ul li:hover { font-weight: 600; cursor: pointer; }
+.navBar .wrapper ul li.categories:hover ul { display: block; position: absolute; top: 20px; left: 0; background-color: #fff; border-radius: 8px; width: 130px; height: auto; padding: 12px; box-shadow: 0px 16px 20px 5px #cccccc0d; z-index: 10; }
+.navBar .wrapper ul li a { color: #fff; text-decoration: none; font-weight: 500; }
+.navBar .wrapper ul li a:hover { text-decoration: underline; }
+.navBar .wrapper .right { display: flex; align-items: center; }
+.navBar .wrapper .right a { color: #fff; font-weight: 500; text-decoration: none; text-transform: uppercase; display: flex; align-items: center; }
+.navBar .wrapper .right a:first-of-type { margin-right: 20px; }
+.navBar .wrapper .right a:hover { text-decoration: underline; }
+.navBar .wrapper img { width: 16px; margin-right: 6px; }

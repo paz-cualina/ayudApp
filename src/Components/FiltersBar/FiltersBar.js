@@ -1,3 +1,5 @@
+import chevronDown from './../../assets/img/chevronDown.png';
+
 export default function FiltersBar() {
     return (
         <div className="filtersBar">
@@ -9,15 +11,16 @@ export default function FiltersBar() {
                 </ul>
                 <div className="sortBy">
                     <span>Ordenar por:</span>
-                    <div className="pill">
+                    <div className="pill withSelect">
                         <select>
-                            <option>Fecha: Más Reciente primero</option>
-                            <option>Fecha: Más Reciente último</option>
-                            <option>Objetivo: Próximo a cumplir primero</option>
-                            <option>Objetivo: Próximo a cumplir último</option>
-                            <option>Costo: Más Caro último</option>
-                            <option>Costo: Más Caro primero</option>
+                            <option>Más Reciente primero</option>
+                            <option>Más Reciente último</option>
+                            <option>Próximo a cumplir primero</option>
+                            <option>Próximo a cumplir último</option>
+                            <option>Más Caro último</option>
+                            <option>Más Caro primero</option>
                         </select>
+                        <img src={chevronDown} />
                     </div>
                 </div>
             </div>

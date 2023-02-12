@@ -48,3 +48,7 @@ a {
 	text-decoration: none;
 }
 input, select, textarea:focus { outline: none; }
+
+select {
+	appearance: none;
+}
