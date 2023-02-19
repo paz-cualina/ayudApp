@@ -1,31 +1,37 @@
-import CartWidget from './CartWidget/CartWidget';
+import CartWidget from '../CartWidget/CartWidget.js';
 import heart from './../../assets/img/heart.png';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
+import { NavLink } from 'react-router-dom';
 
 export default function NavBar() {
     return (
         <div className="navBar">
             <div className="wrapper">
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/">Nosotros</a></li>
+                {/* <ul>
+                    <li>
+                        <NavLink to="/">Home</NavLink>
+                    </li>
+                    <li><NavLink to="/">Nosotros</NavLink></li>
                     <li className="categories">
-                        <a href="/">Colaboraciones</a>
+                        <NavLink to="/">Colaboraciones</NavLink>
                         <ul>
-                            <li>Cirugías</li>
-                            <li>Tratamientos</li>
-                            <li>Alimentación</li>
+                            <li>
+                                <NavLink 
+                                    className={(isActive) => (isActive ? 'active' : 'inactive')}
+                                    to='/category/cirugias'>Cirugías
+                                </NavLink>
+                            </li>
+                            <li><NavLink to='category/tratamientos'>Tratamientos</NavLink></li>
+                            <li><NavLink to="/category/alimentacion">Alimentación</NavLink></li>
                         </ul>
                     </li>
                 </ul>
                 <div className="right">
-                    <a href="/">
+                    <NavLink to="/">
                         <img src={heart} />
                         Lista de espera
-                    </a>
+                    </NavLink>
                     <CartWidget />
-                </div>
+                </div> */}
             </div>
         </div>
     )

@@ -1,28 +1,37 @@
-import NavBar from './Components/NavBar/NavBar.js';
-import FiltersBar from './Components/FiltersBar/FiltersBar.js';
-import ItemListContainer from './Components/ItemListContainer/ItemListContainer.js';
-import Banner from './Components/Banner/Banner.js';
+// import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './Pages/Home';
+import ItemListContainer from './Pages/ItemListContainer';
+import ItemDetailsContainer from './Pages/ItemDetailsContainer';
+import NavBar from './Components/NavBar/NavBar';
 import logoAyudapp from './assets/img/logoAyudapp.png';
 import './App.css';
 
 
 function App() {
   return (
+  <>
+    <img src={logoAyudapp} className="logo" />
+   
+    <Home />
+    <ItemListContainer />
+  </>
+    // <BrowserRouter>
     
-    <div className='page'>
-      <img src={logoAyudapp} className="logo" />
-      <NavBar />
+    //   <img src={logoAyudapp} className="logo" />
+    //   <NavBar />
+    //   <Home />
+    //   <ItemListContainer />
 
-      <section className="wrapper">
+    //   <Routes>
+    //     <Route path='/' element={<Home />} />
+    //     <Route path='/' element={<ItemListContainer />} />
+    //     <Route path='/category/:categoryId' element={<ItemListContainer greeting={ItemList} />} />
+    //     <Route path='/item:id' element={<ItemDetailsContainer />} />
+    //   </Routes>
 
-        <Banner />
-        <FiltersBar />
-        <ItemListContainer greeting={"Bienvenido/a a AyudApp 😻🐶"} />
+    // </BrowserRouter>
 
-      </section>
-    </div>
-
-  );
+  )
 }
 
 export default App;

@@ -1,4 +1,4 @@
-import shoppingCart from './../../../assets/img/shoppingCart.png';
+import shoppingCart from './../../assets/img/shoppingCart.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const CartWidget = () => {
