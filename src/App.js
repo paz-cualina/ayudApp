@@ -1,4 +1,4 @@
-// import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import Banner from '../src/Components/Banner/Banner';
 import FiltersBar from './Components/FiltersBar/FiltersBar';
 import ItemListContainer from './Pages/ItemListContainer';
@@ -10,32 +10,31 @@ import './App.css';
 
 function App() {
   return (
+    <div className='topWrapper'>
+      <section className="content">
 
-  <section className="wrapper">
-    <img src={logoAyudapp} className="logo" />
+        <BrowserRouter>
+          <Link to='/'>
+            <img src={logoAyudapp} className="logo" />
+          </Link>
+        
+          <NavBar />
+          <Banner />
+          <FiltersBar />
 
-    <Banner />
-    <FiltersBar />
-    <ItemListContainer />
+          <Routes>
 
-  </section>
+            <Route path='/' element={<ItemListContainer />} />
+            <Route path='/item/:id' element={<ItemDetailsContainer />} />
+            <Route path='/category/:categoryId' element={<ItemListContainer />} />
+            <Route path='*' element={<div><h1>Esta página no existe</h1></div>} />
 
-    // <BrowserRouter>
-    
-    //   <img src={logoAyudapp} className="logo" />
-    //   <NavBar />
-    //   <Home />
-    //   <ItemListContainer />
+          </Routes>
 
-    //   <Routes>
-    //     <Route path='/' element={<Home />} />
-    //     <Route path='/' element={<ItemListContainer />} />
-    //     <Route path='/category/:categoryId' element={<ItemListContainer greeting={ItemList} />} />
-    //     <Route path='/item:id' element={<ItemDetailsContainer />} />
-    //   </Routes>
+        </BrowserRouter>
 
-    // </BrowserRouter>
-
+      </section>
+    </div>
   )
 }
 

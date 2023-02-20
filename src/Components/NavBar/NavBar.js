@@ -6,7 +6,7 @@ export default function NavBar() {
     return (
         <div className="navBar">
             <div className="wrapper">
-                {/* <ul>
+                <ul>
                     <li>
                         <NavLink to="/">Home</NavLink>
                     </li>
@@ -14,13 +14,8 @@ export default function NavBar() {
                     <li className="categories">
                         <NavLink to="/">Colaboraciones</NavLink>
                         <ul>
-                            <li>
-                                <NavLink 
-                                    className={(isActive) => (isActive ? 'active' : 'inactive')}
-                                    to='/category/cirugias'>Cirugías
-                                </NavLink>
-                            </li>
-                            <li><NavLink to='category/tratamientos'>Tratamientos</NavLink></li>
+                            <li> <NavLink to='/category/cirugias'>Cirugías</NavLink></li>
+                            <li><NavLink to='/category/tratamientos'>Tratamientos</NavLink></li>
                             <li><NavLink to="/category/alimentacion">Alimentación</NavLink></li>
                         </ul>
                     </li>
@@ -31,7 +26,7 @@ export default function NavBar() {
                         Lista de espera
                     </NavLink>
                     <CartWidget />
-                </div> */}
+                </div>
             </div>
         </div>
     )

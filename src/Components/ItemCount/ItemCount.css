@@ -1,6 +1,0 @@
-.wrapperItemCount ul li { display: flex; align-items: center; padding-bottom: 6px; }
-.wrapperItemCount ul li .pill { font-size: 18px; padding: 6px 20px; color: #A555EC; font-weight: 500; text-transform: uppercase; transition: ease 0.3s; cursor: pointer; }
-.wrapperItemCount ul li .btnWrapper { display: flex; align-items: center; justify-content: space-between; width: 90px; height: 30px;  border: 1px solid #F3CCFF; border-radius: 16px; }
-.wrapperItemCount ul li .btnWrapper button { background: rgba(243, 204, 255, 0.5); border: none; height: inherit; width: 30px; cursor: pointer; }
-.wrapperItemCount ul li .btnWrapper button:first-of-type { border-radius: 16px 0 0 16px; }
-.wrapperItemCount ul li .btnWrapper button:last-of-type { border-radius: 0 16px 16px 0; }

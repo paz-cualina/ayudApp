@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import chevronDown from './../../assets/img/chevronDown.png';
 
 export default function FiltersBar() {
@@ -5,9 +6,30 @@ export default function FiltersBar() {
         <div className="filtersBar">
             <div className="wrapper">
                 <ul>
-                    <li>Cirugías</li>
-                    <li>Tratamientos</li>
-                    <li>Alimentación</li>
+                    <li>
+                        <NavLink
+                            className={({isActive}) => isActive ? 'active' : 'inactive'}
+                            to="/">Todos
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink 
+                            className={({isActive}) => isActive ? 'active' : 'inactive'}
+                            to='/category/cirugias'>Cirugías
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink 
+                            className={({isActive}) => isActive ? 'active' : 'inactive'}
+                            to='/category/tratamientos'>Tratamientos
+                        </NavLink>
+                        </li>
+                    <li>
+                        <NavLink
+                            className={({isActive}) => isActive ? 'active' : 'inactive'}
+                            to="/category/alimentacion">Alimentación
+                        </NavLink>
+                    </li>
                 </ul>
                 <div className="sortBy">
                     <span>Ordenar por:</span>

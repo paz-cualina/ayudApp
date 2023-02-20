@@ -64,9 +64,7 @@ const ItemCount = () => {
         <ul className='wrapperCounter'>
             {donations.map((value, index) => 
                 <li key={index}>
-                    <div className='pill'>
-                        <span>{value}</span>
-                    </div>
+                    <span>{value}</span>
                     <div className='btnWrapper'>
                         <button onClick={() => substractItem(index)}>-</button>
                         <p>{getCounter(index)}</p>
@@ -75,7 +73,6 @@ const ItemCount = () => {
                 </li>
             )}
         </ul>
-        <button className='addCart'>Agregar a carrito solidario</button>
     </div> 
   );
 

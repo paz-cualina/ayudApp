@@ -1,11 +1,10 @@
 @import './reset.css';
 @import './itemListContainer.css';
-@import '../../Components/AddItemButton/AddItemButton.css';
 @import '../../Components/Banner/Banner.css';
 @import '../../Components/CartWidget/CartWidget.css';
 @import '../../Components/FiltersBar/FiltersBar.css';
 @import '../../Components/Item/Item.css';
-@import '../../Components/ItemCount/ItemCount.css';
+@import '../../Components/ItemDetail/ItemCount/ItemCount.css';
 @import '../../Components/ItemDetail/ItemDetail.css';
 @import '../../Components/ItemList/ItemList.css';
 @import '../../Components/NavBar/NavBar.css';
@@ -16,8 +15,9 @@
 
 body { font-family: 'Source Sans 3', sans-serif; font-size: 16px; color: #262626; background-color: #F5F5F5; }
 
-.logo { width: 160px; height: auto; padding: 6px; }
+.logo { width: 160px; height: auto; padding: 6px; position: absolute; top: 0; left: 0; }
 
-.wrapper { max-width: 1250px; margin: 0 auto; }
+.topWrapper { position: relative; padding-top: 115px; }
+.content { max-width: 1250px; margin: 0 auto; }
 
 p { line-height: 1.2; }
