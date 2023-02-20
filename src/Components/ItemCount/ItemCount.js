@@ -67,9 +67,11 @@ const ItemCount = () => {
                     <div className='pill'>
                         <span>{value}</span>
                     </div>
-                    <button onClick={() => substractItem(index)}>-</button>
-                    <p>{getCounter(index)}</p>
-                    <button onClick={() => addItem(index)}>+</button>
+                    <div className='btnWrapper'>
+                        <button onClick={() => substractItem(index)}>-</button>
+                        <p>{getCounter(index)}</p>
+                        <button onClick={() => addItem(index)}>+</button>
+                    </div>
                 </li>
             )}
         </ul>

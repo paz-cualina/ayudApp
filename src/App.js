@@ -1,5 +1,6 @@
 // import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Home from './Pages/Home';
+import Banner from '../src/Components/Banner/Banner';
+import FiltersBar from './Components/FiltersBar/FiltersBar';
 import ItemListContainer from './Pages/ItemListContainer';
 import ItemDetailsContainer from './Pages/ItemDetailsContainer';
 import NavBar from './Components/NavBar/NavBar';
@@ -9,12 +10,16 @@ import './App.css';
 
 function App() {
   return (
-  <>
+
+  <section className="wrapper">
     <img src={logoAyudapp} className="logo" />
-   
-    <Home />
+
+    <Banner />
+    <FiltersBar />
     <ItemListContainer />
-  </>
+
+  </section>
+
     // <BrowserRouter>
     
     //   <img src={logoAyudapp} className="logo" />

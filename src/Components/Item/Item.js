@@ -1,8 +1,10 @@
+import catPlaceholder from "../../assets/img/catPlaceholder.png";
+
 const Item = ({product}) => {
   return (
     <div className="cardItem">
       <figure>
-        <img src={product.image} alt={product.name} />
+        <img src={catPlaceholder} alt={product.name} />
       </figure>
       <div className='textWrapper'>
           <h3>¡Ayuda para {product.category}!</h3>
@@ -10,7 +12,7 @@ const Item = ({product}) => {
           <p>Donaciones recibidas:<span>${}</span></p>
           <p>Fecha:<span>{product.date}</span></p>
           <p>Estado:<span>{product.state}</span></p>
-          <p>Causa:{product.description}</p>
+          <p>Causa:<span>{product.description}</span></p>
           <a href='#'>¡Quiero ayudar!</a>
       </div>
     </div>

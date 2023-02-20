@@ -1,5 +1,5 @@
 .filtersBar { margin: 20px 0; }
-.filtersBar .wrapper { display: flex; align-items: center; justify-content: space-between; }
+.filtersBar .wrapper { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; }
 .filtersBar .wrapper ul { display: flex; align-items: center; } 
 .filtersBar .wrapper ul li { border: 1px solid #A555EC; border-radius: 20px; padding: 10px 20px; margin-right: 10px; color: #A555EC; font-weight: 500; text-transform: uppercase; transition: ease 0.3s; }
 .filtersBar .wrapper ul li:hover { background-color: #F3CCFF; border-color: #F3CCFF; cursor: pointer; }

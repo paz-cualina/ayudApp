@@ -18,7 +18,9 @@ const ItemListContainer = () => {
     }, [])
 
   return (
-    <ItemList productList={productList} />
+    <div className='itemListContainer'>
+        <ItemList productList={productList} />
+    </div>
   )
 }
 
