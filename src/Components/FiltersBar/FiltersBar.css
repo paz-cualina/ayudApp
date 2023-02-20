@@ -16,4 +16,4 @@
 
 
 .filtersBar .wrapper ul li a.active { background-color: #F3CCFF; border-color: #F3CCFF; }
-.filtersBar .wrapper ul li a.inactive { background-color: transparent; }
+.filtersBar .wrapper ul li a.inactive {}

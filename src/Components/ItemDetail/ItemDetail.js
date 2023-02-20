@@ -12,10 +12,11 @@ const ItemDetail = ({detail}) => {
                 <h3>¡Ayuda para {detail.category}!</h3> 
                 <span>Faltan: $5500</span>
             </div>
+            <p>Nombre:<span>{detail.name}</span></p>
             <p>Costo {detail.category}:<span>${detail.cost}</span></p>
             <p>Donaciones recibidas:<span>$0</span></p>
             <p>Fecha:<span>{detail.date}</span></p>
-            <p>Estado:<span>{detail.state}</span></p>
+            <p>Estado:<span className="active">{detail.state}</span></p>
             <p>Causa:<span>{detail.description}</span></p>
             <h4>Quiero donar:</h4>
             <ItemCount />
