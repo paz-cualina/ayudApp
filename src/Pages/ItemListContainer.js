@@ -6,24 +6,24 @@ import ItemList from '../Components/ItemList/ItemList';
 const ItemListContainer = () => {
     const [productList, setProductList] = useState([]); //vacio porque lo rellena ejecucion de useEffect
     const {categoryId} = useParams();
-    const getProducts = new Promise((resolve, reject) => {
+    const getProducts = new Promise((resolve) => {
         if (categoryId) {
-            const filteredProducts = product.filter((item) => item.category === categoryId )
+            const filteredProducts = product.filter((item) => item.category === categoryId);
             setTimeout(() => {
                 resolve(filteredProducts);
             }, 1000);
         } else {
             setTimeout(() => {
-                resolve(product)
+                resolve(product);
             }, 1000);
         }
     });
 
     useEffect(() => {
         getProducts.then((response) => {
-            setProductList(response)
+            setProductList(response);
         })
-        .catch((error) => {console.log(error)});
+        .catch((error) => console.error(error));
     }, [categoryId]);
 
   return (

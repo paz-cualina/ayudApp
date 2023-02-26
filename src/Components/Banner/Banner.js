@@ -1,5 +1,4 @@
 import paw from './../../assets/img/paw.png';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Banner = () => {
   return (

@@ -1,21 +1,12 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from "react";
 
-const ItemCount = () => {
+const ItemCount = ({getCounter, getSetCounter}) => {
 
-    let donations=['$100','$200','$300'];
+    let donations = ['$100','$200','$300'];
     const limit = 9;
-    const [firstCounter, setFirstCounter] = useState(0);
-    const [secondCounter, setSecondCounter] = useState(0);
-    const [thirdCounter, setThirdCounter] = useState(0);
-
-    const addItem = (index) => {
-        if (index === 0) {
-            setCounter(firstCounter, setFirstCounter);                
-        } else if (index === 1) {
-            setCounter(secondCounter, setSecondCounter);
-        } else if (index === 2) {
-            setCounter(thirdCounter, setThirdCounter);
-        }
+ 
+    const onAdd = (index) => {
+        setCounter(getCounter(index), getSetCounter(index));
     };
 
     const setCounter = (counter, setter) => {
@@ -25,13 +16,7 @@ const ItemCount = () => {
     }
 
     const substractItem = (index) => {
-        if (index === 0) {
-            substractCounter(firstCounter, setFirstCounter);                
-        } else if (index === 1) {
-            substractCounter(secondCounter, setSecondCounter);
-        } else if (index === 2) {
-            substractCounter(thirdCounter, setThirdCounter);
-        }
+        substractCounter(getCounter(index), getSetCounter(index));
     };
 
     const substractCounter = (counter, setter) => {
@@ -39,23 +24,28 @@ const ItemCount = () => {
             setter(counter - 1);
         }
     }
-
-    const getCounter = (index) => {
-        if (index === 0) {
-            return firstCounter;                
-        } else if (index === 1) {
-            return secondCounter;
-        } else if (index === 2) {
-            return thirdCounter;
-        }
-
-    }
     
+    const showMessage = () => {
+        alert('No se pueden agregar más de diez donaciones a la vez de un mismo monto');
+    }
+
     useEffect(() => {
-        if (firstCounter > 9) {
-            alert('No se pueden agregar más de diez donaciones a la vez');
+        if (getCounter(0) > 9) {
+            showMessage();
         }
-    } , [firstCounter]);
+    }, [getCounter(0)]);
+
+    useEffect(() => {
+        if (getCounter(1) > 9) {
+            showMessage();
+        }
+    }, [getCounter(1)]);
+
+    useEffect(() => {
+        if (getCounter(2) > 9) {
+            showMessage();
+        }
+    }, [getCounter(2)]);
 
 
   return (
@@ -68,7 +58,7 @@ const ItemCount = () => {
                     <div className='btnWrapper'>
                         <button onClick={() => substractItem(index)}>-</button>
                         <p>{getCounter(index)}</p>
-                        <button onClick={() => addItem(index)}>+</button>
+                        <button onClick={() => onAdd(index)}>+</button>
                     </div>
                 </li>
             )}

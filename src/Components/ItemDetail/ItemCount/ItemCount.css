@@ -1,8 +1,9 @@
-.wrapperItemCount ul li { display: flex; align-items: center; padding-bottom: 6px; }
-.wrapperItemCount ul span  { font-size: 18px; padding: 6px 0; color: #A555EC; font-weight: 500; text-transform: uppercase; transition: ease 0.3s; cursor: pointer; margin-right: 10px; }
-.wrapperItemCount ul li .btnWrapper { display: flex; align-items: center; justify-content: space-between; width: 80px; height: 25px;  border: 1px solid #F3CCFF; border-radius: 16px; }
-.wrapperItemCount ul li .btnWrapper button { background: rgba(243, 204, 255, 0.5); border: none; height: inherit; width: 25px; cursor: pointer; color:#A555EC; font-weight: 600; }
-.wrapperItemCount ul li .btnWrapper button:first-of-type { border-radius: 16px 0 0 16px; }
-.wrapperItemCount ul li .btnWrapper button:last-of-type { border-radius: 0 16px 16px 0; }
-.wrapperItemCount ul li .btnWrapper button:hover { background: #F3CCFF; }
-.wrapperItemCount ul li .btnWrapper p { color: #2e2e2e; }
+.wrapperItemCount ul.wrapperCounter { margin-bottom: 20px; }
+.wrapperItemCount ul.wrapperCounter li { display: flex; align-items: center; padding-bottom: 6px; }
+.wrapperItemCount ul.wrapperCounter span  { font-size: 18px; padding: 6px 0; color: #A555EC; font-weight: 500; text-transform: uppercase; transition: ease 0.3s; cursor: pointer; margin-right: 10px; }
+.wrapperItemCount ul.wrapperCounter li .btnWrapper { display: flex; align-items: center; justify-content: space-between; width: 80px; height: 25px;  border: 1px solid #F3CCFF; border-radius: 16px; }
+.wrapperItemCount ul.wrapperCounter li .btnWrapper button { background: rgba(243, 204, 255, 0.5); border: none; height: inherit; width: 25px; cursor: pointer; color:#A555EC; font-weight: 600; margin-right: 0; }
+.wrapperItemCount ul.wrapperCounter li .btnWrapper button:first-of-type { border-radius: 16px 0 0 16px; }
+.wrapperItemCount ul.wrapperCounter li .btnWrapper button:last-of-type { border-radius: 0 16px 16px 0; }
+.wrapperItemCount ul.wrapperCounter li .btnWrapper button:hover { background: #F3CCFF; }
+.wrapperItemCount ul.wrapperCounter li .btnWrapper p { color: #2e2e2e; }

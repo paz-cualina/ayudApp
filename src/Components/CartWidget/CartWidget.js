@@ -1,16 +1,25 @@
 import shoppingCart from './../../assets/img/shoppingCart.png';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { CartContext } from '../../context/CartContext.js';
+import { useContext, useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const CartWidget = () => {
-  return (
-    <div className="cartWidget">
-        <a href="/">
-            <img src={shoppingCart} />
-            Solidario
-        </a>
-        <span className="notification">2</span>
-    </div>
-  )
-}
+  const { cart } = useContext(CartContext);
+  const [total, setTotal] = useState([0]);
 
-export default CartWidget
+  useEffect(() => {
+    setTotal(cart.reduce((prev, current) => prev + current.quantity, 0))
+  }, [cart]);
+
+  return (
+    <Link to={'/cart'}>
+      <div className="cartWidget">
+          <img src={shoppingCart} />
+          <p>Solidario</p>
+          <span className="notification">{total}</span>
+      </div>
+    </Link>
+  );
+};
+
+export default CartWidget;

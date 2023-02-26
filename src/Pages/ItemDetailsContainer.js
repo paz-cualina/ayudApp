@@ -4,7 +4,7 @@ import { product } from "../data/products";
 import ItemDetail from "../Components/ItemDetail/ItemDetail";
 
 const ItemDetailsContainer = () => {
-    const { id } = useParams();
+    const {id} = useParams();
     const [detailObject, setDetailObject] = useState({});
     const getProduct = new Promise((resolve, reject) => {
         setTimeout (() => {

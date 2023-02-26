@@ -13,11 +13,28 @@
 
 
 body { font-family: 'Source Sans 3', sans-serif; font-size: 16px; color: #262626; background-color: #F5F5F5; }
-
-.logo { width: 160px; height: auto; padding: 6px; position: absolute; top: 0; left: 0; }
-
-.topWrapper { position: relative; padding-top: 115px; }
-.content { max-width: 1250px; margin: 0 auto; }
 p { line-height: 1.2; }
 
+.logo { width: 160px; height: auto; padding: 6px; position: absolute; top: 0; left: 0; }
+.topWrapper { position: relative; padding-top: 115px; }
+.content { max-width: 1250px; margin: 0 auto; }
+
+
+.btnWrapper { display: flex; align-items: center; }
+button { background: #a555ec; border: 1px solid #a555ec; color: #fff; font-weight: 600; text-transform: uppercase; font-size: 14px; height: 40px; border-radius: 8px; margin-top: auto; font-family: 'Source Sans 3', sans-serif; padding: 4px 16px; transition: all 0.3s; cursor: pointer; }
+button:hover { background: rgba(243, 204, 255, 0.5); color: #a555ec; }
+.btnDark { background: #5d258f; border: 1px solid #5d258f; }
+.btnDark:hover { color: #5d258f; background: rgba(243, 204, 255, 0.5); }
+.delete { background: rgb(36 36 36); border: 1px solid rgb(36 36 36); padding: 0 6px; height: auto; border-radius: 4px; position: relative; }
+.delete:hover { color: #5d258f; background: rgba(243, 204, 255, 0.5); border: 1px solid #5d258f; }
+
+.delete:hover::after { content: "Remover"; display: block; width: auto; padding: 3px; background-color: #262626; color: #fff; font-size: 12px; position: absolute; bottom: 80%; left: 50%; z-index: 100; }
+
+
 .itemListContainer { margin-top: 40px; }
+
+.cartProduct { display: flex; flex-direction: column; max-width: 375px; background: rgba(255, 255, 255, 0.65); padding: 30px 40px; margin-top: 50px; }
+.cartProduct h2 { color: #a555ec; font-size: 20px; font-weight: 600; text-transform: uppercase; padding-bottom: 10px; }
+.cartProduct .singleProduct { display: flex; align-items: center; margin-bottom: 10px; }
+.cartProduct .singleProduct h3 { font-size: 18px; font-weight: 600; }
+.cartProduct .singleProduct h5 { font-size: 18px; padding: 0 10px; }
