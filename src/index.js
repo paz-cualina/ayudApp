@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import { initializeApp } from "firebase/app";
 
-// Your web app's Firebase configuration
+// Web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyBd5NmLqf490UlZWKkE9hu1A-gS_xzA8i0",
   authDomain: "ayudapp-ffcdb.firebaseapp.com",

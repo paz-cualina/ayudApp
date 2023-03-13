@@ -1,31 +1,30 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import ItemList from '../Components/ItemList/ItemList';
+import { getFirestore, getDocs, collection } from 'firebase/firestore';
 
 const ItemListContainer = () => {
     const [productList, setProductList] = useState([]); //vacio porque lo rellena ejecucion de useEffect
     const {categoryId} = useParams();
-    
-    const getProducts = new Promise((resolve) => {
-        if (categoryId) {
-            const filteredProducts = product.filter((item) => item.category === categoryId);
-            setTimeout(() => {
-                resolve(filteredProducts);
-            }, 1000);
-        } else {
-            setTimeout(() => {
-                resolve(product);
-            }, 1000);
-        }
-    });
 
+    const getProducts = () => {
+      const db = getFirestore();
+      const querySnapshot = collection(db, 'items');
 
-    useEffect(() => {
-        getProducts.then((response) => {
-            setProductList(response);
+      getDocs(querySnapshot)
+        .then((response) => {
+          const list = response.docs.map((doc) => {
+            return {
+              id: doc.id, 
+              ...doc.data()
+            };
+          });
+          setProductList(list);
         })
-        .catch((error) => console.error(error));
-    }, [categoryId]);
+        .catch((error) => console.log(error));
+    }
+
+    useEffect(() => { getProducts(); }, [categoryId]);
 
     return (
         <div className='itemListContainer'>
