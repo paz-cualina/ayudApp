@@ -48,8 +48,7 @@ const ItemCount = ({getCounter, getSetCounter}) => {
     }, [getCounter(2)]);
 
 
-  return (
-    
+  return ( 
     <div className='wrapperItemCount'>
         <ul className='wrapperCounter'>
             {donations.map((value, index) => 

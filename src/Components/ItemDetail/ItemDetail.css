@@ -7,6 +7,6 @@
 .itemDetail .textWrapper p { font-weight: 600; text-transform: uppercase; padding-bottom: 2px; }
 .itemDetail .textWrapper p span { font-weight: normal; padding-left: 4px; text-transform: none; }
 .itemDetail .textWrapper p span.active { color: #3CA30B; font-weight: 500; text-transform: uppercase; }
-.itemDetail .textWrapper .btnWrapper button { margin-right: 10px; }
+.itemDetail .textWrapper .btnWrapper button { margin-right: 10px; padding: 8px 16px; }
 .itemDetail .textWrapper .titleWrapper { display: flex; align-items: center; margin-bottom: 15px; }
-.itemDetail .textWrapper .titleWrapper span { background: #FFFF6D; border-radius: 6px; font-weight: 700; font-size: 14px; padding: 6px 12px; text-transform: uppercase; margin-left: 10px; }
+.itemDetail .textWrapper .titleWrapper span { background: #FFFF6D; border-radius: 6px; font-weight: 700; font-size: 14px; padding: 6px 12px; text-transform: uppercase; margin-left: 10px; white-space: nowrap; }

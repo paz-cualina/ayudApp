@@ -1,8 +1,10 @@
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
+import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
     const {cart, clear, removeItem} = useContext(CartContext);
+    const navigate = useNavigate();
     return (
         <div className="cartProduct">
             <h2>Resumen de Donaciones:</h2>
@@ -15,6 +17,13 @@ const Cart = () => {
             ))}
             {
                 cart.length > 0 && <button onClick={clear}>Vaciar Carrito</button>
+            }
+            {
+                cart.length === 0 && 
+                    <div>
+                        <p>No hay nada agregado al carrito todavía</p>
+                        <button onClick={() => navigate('/')} >Seguir viendo donaciones</button>
+                    </div>
             }
         </div>
     )

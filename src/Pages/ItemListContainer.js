@@ -1,4 +1,3 @@
-import { product } from '../data/products';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import ItemList from '../Components/ItemList/ItemList';
@@ -6,6 +5,7 @@ import ItemList from '../Components/ItemList/ItemList';
 const ItemListContainer = () => {
     const [productList, setProductList] = useState([]); //vacio porque lo rellena ejecucion de useEffect
     const {categoryId} = useParams();
+    
     const getProducts = new Promise((resolve) => {
         if (categoryId) {
             const filteredProducts = product.filter((item) => item.category === categoryId);
@@ -19,6 +19,7 @@ const ItemListContainer = () => {
         }
     });
 
+
     useEffect(() => {
         getProducts.then((response) => {
             setProductList(response);
@@ -26,11 +27,11 @@ const ItemListContainer = () => {
         .catch((error) => console.error(error));
     }, [categoryId]);
 
-  return (
-    <div className='itemListContainer'>
-        <ItemList productList={productList} />
-    </div>
-  )
+    return (
+        <div className='itemListContainer'>
+            <ItemList productList={productList} />
+        </div>
+    )
 }
 
 export default ItemListContainer

@@ -32,7 +32,7 @@ export const product = [
     {
         id: '4',
         name: 'Kelly',
-        description: 'Fue atropellado por un auto que no le dió asistencia veterinaria. Necesita ser internado de urgencia e intervenido.',
+        description: 'Fue atropellada por un auto que no le dió asistencia veterinaria. Necesita ser internada de urgencia e intervenida.',
         cost: '20000',
         date: '15/02/2023',
         state: 'Activo',

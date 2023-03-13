@@ -56,9 +56,9 @@ const ItemDetail = ({detail}) => {
             <h4>Quiero donar:</h4>
             <ItemCount getCounter={getCounter} getSetCounter={getSetCounter} />
             <div className="btnWrapper">
-              <button onClick={() => navigate('/')} >Seguir comprando</button>
+              <button onClick={() => navigate('/')} >Seguir donando</button>
               <button onClick={() => addItem(detail, getAllCounters())}>Agregar a carrito solidario</button>
-              <button onClick={() => navigate('/cart')} className='btnDark' >Completar mi compra</button>
+              <button onClick={() => navigate('/cart')} className='btnDark' >Completar mi donación</button>
             </div>
       </div>
     </div>
