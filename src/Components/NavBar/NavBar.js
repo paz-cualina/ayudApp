@@ -1,15 +1,10 @@
 import CartWidget from '../CartWidget/CartWidget.js';
-import { NavLink, Link } from 'react-router-dom';
-import logoAyudapp from '../../assets/img/logoAyudapp.png';
+import { NavLink } from 'react-router-dom';
 
 export default function NavBar() {
     return (
         <div className="navBar">
-            <Link to='/'>
-                <img src={logoAyudapp} className="logo" />
-            </Link>
             <ul>
-                <li><NavLink to="/">Nosotros</NavLink></li>
                 <li className="categories">
                     <NavLink to="/">Colaboraciones</NavLink>
                     <ul>
@@ -19,7 +14,7 @@ export default function NavBar() {
                     </ul>
                 </li>
                 <li><CartWidget /></li>
-            </ul>
+            </ul>  
         </div>
     )
 }

@@ -1,4 +1,5 @@
-import paw from './../../assets/img/paw.png';
+import logoAyudapp from '../../assets/img/logoAyudapp.png';
+import { Link } from 'react-router-dom';
 
 const Banner = () => {
   return (
@@ -10,7 +11,9 @@ const Banner = () => {
                 esperando ser adoptados de manera muy rápida.
             </p>
         </div>
-        <img src={paw} />
+        <Link to='/'>
+            <img src={logoAyudapp} className="logo" />
+        </Link>
     </div>
 )
 }

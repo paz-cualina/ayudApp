@@ -16,8 +16,7 @@ body { font-family: 'Source Sans 3', sans-serif; font-size: 16px; color: #262626
 p { line-height: 1.2; }
 
 .mainWrapper { }
-.content { max-width: 1250px; margin: 0 auto; padding: 70px 0 100px; }
-
+.content { max-width: 1250px; margin: 0 auto; padding: 0 0 100px; }
 
 .btnWrapper { display: flex; align-items: center; }
 button { background: #a555ec; border: 1px solid #a555ec; color: #fff; font-weight: 600; text-transform: uppercase; font-size: 14px; height: auto; border-radius: 8px; margin-top: auto; font-family: 'Source Sans 3', sans-serif; padding: 4px 16px; transition: all 0.3s; cursor: pointer; }
@@ -60,7 +59,7 @@ button:hover { background: rgba(243, 204, 255, 0.5); color: #a555ec; }
     .banner { display: flex; flex-direction: column-reverse; align-items: center; }
     .banner .textWrapper { max-width: 100%; }
     .banner img { position: static; transform: none; margin: 0 auto; margin-bottom: 15px; width: 45px; } 
-    .filtersBar { margin-top: 40px; }
+    .filtersBar { margin-top: 25px; }
     .filtersBar .wrapper ul { flex-wrap: wrap; }
     .filtersBar .wrapper ul li a { font-size: 14px; padding: 6px 16px; }
     .wrapperItemCount ul.wrapperCounter li .btnWrapper { flex-direction: row; }
@@ -68,12 +67,12 @@ button:hover { background: rgba(243, 204, 255, 0.5); color: #a555ec; }
     .itemDetail .textWrapper .btnWrapper button { width: 100%; margin-bottom: 10px; }
 }
 @media screen and (max-width: 540px) {
-    .content { padding-top: 90px; }
-    .navBar { flex-direction: column; height: auto;  padding: 6px 20px; }
-    .navBar ul { flex-direction: column; }
+
+    .navBar { height: auto; }
+    .navBar ul { height: 90px; flex-wrap: wrap; }
     .navBar ul li { margin: 4px 0; font-size: 15px; }
     .navBar .logo { width: 40px; }
-    .banner { margin-top: 60px; }
+    .banner { margin-top: 20px; }
     .itemList { gap: 20px; }
     .cardItem { width: 100%; padding: 20px; padding-bottom: 50px; }
     .itemListContainer { margin-top: 20px; }
