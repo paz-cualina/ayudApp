@@ -15,9 +15,8 @@
 body { font-family: 'Source Sans 3', sans-serif; font-size: 16px; color: #262626; background-color: #F5F5F5; }
 p { line-height: 1.2; }
 
-.logo { width: 160px; height: auto; padding: 6px; position: absolute; top: 5px; left: 5px; }
-.topWrapper { position: relative; padding-top: 115px; }
-.content { max-width: 1250px; margin: 0 auto; padding-bottom: 100px; }
+.mainWrapper { }
+.content { max-width: 1250px; margin: 0 auto; padding: 70px 0 100px; }
 
 
 .btnWrapper { display: flex; align-items: center; }
@@ -29,7 +28,6 @@ button:hover { background: rgba(243, 204, 255, 0.5); color: #a555ec; }
 .delete:hover { color: #5d258f; background: rgba(243, 204, 255, 0.5); border: 1px solid #5d258f; }
 .delete:hover::after { content: "Remover"; display: block; width: auto; padding: 3px; background-color: #262626; color: #fff; font-size: 12px; position: absolute; bottom: 80%; left: 50%; z-index: 100; }
 
-
 .itemListContainer { margin-top: 40px; }
 
 .cartProduct { display: flex; flex-direction: column; max-width: 375px; background: rgba(255, 255, 255, 0.65); padding: 30px 40px; margin-top: 50px; }
@@ -38,8 +36,9 @@ button:hover { background: rgba(243, 204, 255, 0.5); color: #a555ec; }
 .cartProduct .singleProduct h3 { font-size: 18px; font-weight: 600; }
 .cartProduct .singleProduct h5 { font-size: 18px; padding: 0 10px; }
 .cartProduct .singleProduct img { width: 120px; }
-.cartProduct button { margin-top: 20px; }
-.cartProduct button.delete { margin-top: 0px; }
+.cartProduct button { margin-top: 10px; padding: 8px 16px; }
+.cartProduct button:first-of-type { margin-top: 20px; }
+.cartProduct button.delete { margin-top: 0px; padding: 0 6px; }
 
 
 /*Responsive*/
@@ -48,7 +47,7 @@ button:hover { background: rgba(243, 204, 255, 0.5); color: #a555ec; }
     .banner img { width: 65px; }
 }
 @media screen and (max-width: 1023px) {
-    .content { max-width: 90%; }
+    .content { padding-left: 20px; padding-right: 20px;}
     .banner .textWrapper { max-width: 450px; }
     .banner img { width: 60px; }
     .filtersBar .wrapper ul li { margin-bottom: 25px; }
@@ -58,13 +57,7 @@ button:hover { background: rgba(243, 204, 255, 0.5); color: #a555ec; }
     .itemDetail .textWrapper .btnWrapper button { padding: 8px 12px; }
 }
 @media screen and (max-width: 767px) {
-    .navBar { height: auto; }
-    .navBar .wrapper { flex-direction: column; }
-    .navBar .wrapper ul { flex-direction: column; }
-    .navBar .wrapper ul li { margin: 6px 0; }
-    .navBar .wrapper .right { flex-direction: column; }
-    .navBar .wrapper .right a { margin: 6px 0; }
-    .banner { display: flex; flex-direction: column-reverse; align-items: center; margin-top: 115px; }
+    .banner { display: flex; flex-direction: column-reverse; align-items: center; }
     .banner .textWrapper { max-width: 100%; }
     .banner img { position: static; transform: none; margin: 0 auto; margin-bottom: 15px; width: 45px; } 
     .filtersBar { margin-top: 40px; }
@@ -75,10 +68,17 @@ button:hover { background: rgba(243, 204, 255, 0.5); color: #a555ec; }
     .itemDetail .textWrapper .btnWrapper button { width: 100%; margin-bottom: 10px; }
 }
 @media screen and (max-width: 540px) {
-    .navBar { padding: 6px 20px; }
-    .banner { margin-top: 125px; }
-    .cardItem { width: 100%; }
+    .content { padding-top: 90px; }
+    .navBar { flex-direction: column; height: auto;  padding: 6px 20px; }
+    .navBar ul { flex-direction: column; }
+    .navBar ul li { margin: 4px 0; font-size: 15px; }
+    .navBar .logo { width: 40px; }
+    .banner { margin-top: 60px; }
+    .itemList { gap: 20px; }
+    .cardItem { width: 100%; padding: 20px; padding-bottom: 50px; }
+    .itemListContainer { margin-top: 20px; }
     .itemDetail .textWrapper .titleWrapper { flex-direction: column; }
     .itemDetail .textWrapper .titleWrapper h3 { margin-bottom: 10px; }
     .itemDetail .textWrapper .titleWrapper span { margin-bottom: 10px; margin-left: auto; }
+    .filtersBar .wrapper .sortBy { display: none; }
 }
