@@ -37,6 +37,7 @@ button:hover { background: rgba(243, 204, 255, 0.5); color: #a555ec; }
 .cartProduct .singleProduct { display: flex; align-items: center; margin-bottom: 10px; }
 .cartProduct .singleProduct h3 { font-size: 18px; font-weight: 600; }
 .cartProduct .singleProduct h5 { font-size: 18px; padding: 0 10px; }
+.cartProduct .singleProduct img { width: 120px; }
 .cartProduct button { margin-top: 20px; }
 .cartProduct button.delete { margin-top: 0px; }
 
