@@ -1,5 +1,4 @@
-import logoAyudapp from '../../assets/img/logoAyudapp.png';
-import { Link } from 'react-router-dom';
+import paw from './../../assets/img/paw.png';
 
 const Banner = () => {
   return (
@@ -11,11 +10,9 @@ const Banner = () => {
                 esperando ser adoptados de manera muy rápida.
             </p>
         </div>
-        <Link to='/'>
-            <img src={logoAyudapp} className="logo" />
-        </Link>
+        <img src={paw}></img>
     </div>
-)
+    )
 }
 
 export default Banner
