@@ -69,6 +69,9 @@ button:hover { background: rgba(243, 204, 255, 0.5); color: #a555ec; }
 }
 @media screen and (max-width: 767px) {
     .navBar .backgroundHero { height: 375px; }
+    .navBar ul li:nth-child(2),
+    .navBar ul li:nth-child(3),
+    .navBar ul li:nth-child(4) { display: none; }
     .banner { display: flex; flex-direction: column-reverse; align-items: center; }
     .banner .textWrapper { max-width: 100%; }
     .banner img { position: static; transform: none; margin: 0 auto; margin-bottom: 15px; width: 45px; } 
@@ -92,11 +95,6 @@ button:hover { background: rgba(243, 204, 255, 0.5); color: #a555ec; }
     .navBar ul li { margin: 4px 0; font-size: 15px; padding-right: 10px; }
     .navBar ul li:last-of-type { padding-right: 0; }
     .navBar ul li a { font-size: 14px; }
-    .navBar ul li:nth-child(2),
-    .navBar ul li:nth-child(3),
-    .navBar ul li:nth-child(4) {
-        display: none;
-    }
     .navBar .logo { width: 40px; }
     .banner { margin-top: 20px; }
     .itemList { gap: 20px; }
