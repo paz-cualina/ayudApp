@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { CartContext, sumQuantity, getTotalQuantity } from "../context/CartContext";
 import { useNavigate } from "react-router-dom";
 import catPlaceholder from "../assets/img/catPlaceholder.png";
@@ -6,6 +6,11 @@ import { collection, getFirestore, addDoc } from "firebase/firestore";
 
 const Cart = () => {
     const {cart, clear, removeItem} = useContext(CartContext);
+    const [formValue, setFormValue] = useState({
+        name: "",
+        email: "",
+        phone:""
+    });
     const navigate = useNavigate();
 
     const createOrder = (event) => {
@@ -15,8 +20,8 @@ const Cart = () => {
 
         addDoc(querySnapshot, {
             buyer: {
-                email: 'keila@ayudapp.com',
                 name: 'Keila Sancristobal',
+                email: 'keila@ayudapp.com',
                 phone: '91785697'
             },
             cases: cart.map((product) => ({
@@ -34,34 +39,49 @@ const Cart = () => {
         .catch((error) => console.log(error))
     };
 
+    const handleInput = (event) => {
+        setFormValue({
+            ...formValue,
+            name: event.target.value
+        })
+    }
+
     return (
-        <div className="cartProduct">
-            <h2>Resumen de Donaciones:</h2>
-            {cart.map((product) => (
-                <div key={product.name} className="singleProduct">
-                    <h3>{product.name}</h3>
-                    <h5>{getTotalQuantity(product.quantity)} = $ {sumQuantity(product.quantity)}</h5>
-                    <figure>
-                        <img src={catPlaceholder} alt={product.name} />
-                    </figure>
-                    <button onClick={() => removeItem(product.id)} className="delete">X</button>
-                </div>
-            ))}
-            total: { cart.reduce((acc, curr) => acc + sumQuantity(curr.quantity), 0) }
-            {
-                cart.length > 0 && 
-                <>
-                    <button onClick={clear}>Vaciar Carrito</button>
-                    <button onClick={createOrder}>Completar donación</button>
-                </>
-            }
-            {
-                cart.length === 0 && 
-                    <div>
-                        <p>No hay nada agregado al carrito todavía</p>
-                        <button onClick={() => navigate('/')} >Seguir viendo donaciones</button>
+        <div className="donations">
+            <div className="imgBack"></div>
+            <div className="cartProduct">
+                <h2>Resumen de Donaciones:</h2>
+                {cart.map((product) => (
+                    <div key={product.name} className="singleProduct">
+                        <h3>{product.name}</h3>
+                        <h5>{getTotalQuantity(product.quantity)} = $ {sumQuantity(product.quantity)}</h5>
+                        <figure>
+                            <img src={catPlaceholder} alt={product.name} />
+                        </figure>
+                        <button onClick={() => removeItem(product.id)} className="delete">X</button>
                     </div>
-            }
+                ))}
+                <span>Total: $ { cart.reduce((acc, curr) => acc + sumQuantity(curr.quantity), 0) }</span>
+                {
+                    cart.length > 0 && 
+                    <>
+                        <button onClick={clear}>Vaciar Carrito</button>
+                    </>
+                }
+                {
+                    cart.length === 0 && 
+                        <div>
+                            <p>No hay nada agregado al carrito todavía</p>
+                            <button onClick={() => navigate('/')} >Seguir viendo donaciones</button>
+                        </div>
+                }
+            </div>
+            <form>
+                <input type="text" placeholder="Nombre" value={formValue.name} onChange={handleInput} />
+                <input type="text" placeholder="Teléfono" value={formValue.phone} onChange={handleInput} />
+                <input type="email" placeholder="Email" value={formValue.email} onChange={handleInput} />
+                <button onClick={createOrder}>Completar donación</button> 
+            </form>
         </div>
     )
 };

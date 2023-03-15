@@ -35,12 +35,12 @@ export default function FiltersBar() {
                     <span>Ordenar por:</span>
                     <div className="pill withSelect">
                         <select>
-                            <option>Más Reciente primero</option>
-                            <option>Más Reciente último</option>
                             <option>Próximo a cumplir primero</option>
                             <option>Próximo a cumplir último</option>
-                            <option>Más Caro último</option>
-                            <option>Más Caro primero</option>
+                            <option>Más Reciente primero</option>
+                            <option>Más Reciente último</option>
+                            <option>Activo</option>
+                            <option>Terminado</option>
                         </select>
                         <img src={chevronDown} />
                     </div>

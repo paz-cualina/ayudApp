@@ -2,7 +2,7 @@ import ItemCount from "./ItemCount/ItemCount";
 import catPlaceholder from "../../assets/img/catPlaceholder.png";
 import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { CartContext, setQuantity } from "../../context/CartContext";
+import { CartContext, setQuantity, sumQuantity } from "../../context/CartContext";
 
 const ItemDetail = ({detail}) => {
   const navigate = useNavigate();
@@ -37,6 +37,8 @@ const ItemDetail = ({detail}) => {
     }
   };
 
+  const {cart} = useContext(CartContext);
+
   return (
     <div className="itemDetail">
       <figure>
@@ -45,11 +47,11 @@ const ItemDetail = ({detail}) => {
       <div className='textWrapper'>
             <div className="titleWrapper">
                 <h3>¡Ayuda para {detail.category}!</h3> 
-                <span>Faltan: $5500</span>
+                <span>Faltan: $ { detail.cost - cart.reduce((acc, curr) => acc + sumQuantity(curr.quantity), 0) }</span>
             </div>
             <p>Nombre:<span>{detail.name}</span></p>
             <p>Costo {detail.category}:<span>${detail.cost}</span></p>
-            <p>Donaciones recibidas:<span>$0</span></p>
+            <p>Donaciones recibidas:<span>{ cart.reduce((acc, curr) => acc + sumQuantity(curr.quantity), 0) }</span></p>
             <p>Fecha:<span>{detail.date}</span></p>
             <p>Estado:<span className="active">{detail.state}</span></p>
             <p>Causa:<span>{detail.description}</span></p>

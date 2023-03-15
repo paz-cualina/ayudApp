@@ -10,10 +10,11 @@
 .filtersBar .wrapper .sortBy .pill:hover { background-color: #F3CCFF; border-color: #F3CCFF; cursor: pointer; }
 .filtersBar .wrapper .sortBy select { border: none; background: transparent; font-size: 12px; text-transform: uppercase; font-weight: 600; color: #A555EC; padding: 10px 14px; width: 235px; cursor: pointer; }
 .filtersBar .wrapper .sortBy select option { color: #A555EC; font-weight: 500; }
+.filtersBar .wrapper .sortBy .pill.withSelect select + img { transform: rotate(0); transition: all 0.3s; }
+.filtersBar .wrapper .sortBy .pill.withSelect select:focus + img { transform: rotate(180deg); }
 .filtersBar .wrapper .sortBy .pill.withSelect { position: relative; }
-.filtersBar .wrapper .sortBy .pill.withSelect img { width: 14px; position: absolute; top: 12px; right: 10px; }
+.filtersBar .wrapper .sortBy .pill.withSelect img { width: 14px; position: absolute; top: 11px; right: 10px; }
 .filtersBar .wrapper .sortBy .pill.withSelect img:hover { filter: brightness(6); }
-
 
 .filtersBar .wrapper ul li a.active { background-color: #F3CCFF; border-color: #F3CCFF; }
 .filtersBar .wrapper ul li a.inactive {}
