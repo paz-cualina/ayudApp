@@ -88,10 +88,15 @@ button:hover { background: rgba(243, 204, 255, 0.5); color: #a555ec; }
 @media screen and (max-width: 540px) {
     .navBar { height: auto; }
     .navBar .backgroundHero { height: 300px; }
-    .navBar ul { height: auto; flex-wrap: wrap; padding: 15px; }
+    .navBar ul { height: auto; flex-wrap: wrap; padding: 8px 15px; }
     .navBar ul li { margin: 4px 0; font-size: 15px; padding-right: 10px; }
     .navBar ul li:last-of-type { padding-right: 0; }
     .navBar ul li a { font-size: 14px; }
+    .navBar ul li:nth-child(2),
+    .navBar ul li:nth-child(3),
+    .navBar ul li:nth-child(4) {
+        display: none;
+    }
     .navBar .logo { width: 40px; }
     .banner { margin-top: 20px; }
     .itemList { gap: 20px; }

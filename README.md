@@ -1,3 +1,10 @@
+![](./createAnOder.gif);
+
+# AyudApp
+AyudApp una aplicación para donar dinero para apoyar animales que se encuentran viviendo en la calle o en transitorio colaborando así con los gastos a cubrir de tratamientos, cirugías y alimentación de los mismos. 
+
+AyudApp is an application to donate money to support animals that are living on the street or in a foster home, thus collaborating with the expenses to cover their treatments, surgeries and food.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
