@@ -20,9 +20,9 @@ const Cart = () => {
 
         addDoc(querySnapshot, {
             buyer: {
-                name: 'Keila Sancristobal',
-                email: 'keila@ayudapp.com',
-                phone: '91785697'
+                name: formValue.name,
+                email: formValue.email,
+                phone: formValue.phone
             },
             cases: cart.map((product) => ({
                 title: product.name,
@@ -42,46 +42,48 @@ const Cart = () => {
     const handleInput = (event) => {
         setFormValue({
             ...formValue,
-            name: event.target.value
+            [event.target.name]: event.target.value
         })
     }
 
     return (
         <div className="donations">
-            <div className="imgBack"></div>
-            <div className="cartProduct">
-                <h2>Resumen de Donaciones:</h2>
-                {cart.map((product) => (
-                    <div key={product.name} className="singleProduct">
-                        <h3>{product.name}</h3>
-                        <h5>{getTotalQuantity(product.quantity)} = $ {sumQuantity(product.quantity)}</h5>
-                        <figure>
-                            <img src={catPlaceholder} alt={product.name} />
-                        </figure>
-                        <button onClick={() => removeItem(product.id)} className="delete">X</button>
-                    </div>
-                ))}
-                <span>Total: $ { cart.reduce((acc, curr) => acc + sumQuantity(curr.quantity), 0) }</span>
-                {
-                    cart.length > 0 && 
-                    <>
-                        <button onClick={clear}>Vaciar Carrito</button>
-                    </>
-                }
-                {
-                    cart.length === 0 && 
-                        <div>
-                            <p>No hay nada agregado al carrito todavía</p>
-                            <button onClick={() => navigate('/')} >Seguir viendo donaciones</button>
+            <div className="wrapper">
+                <div className="imgBack"></div>
+                <div className="cartProduct">
+                    <h2>Resumen de Donaciones:</h2>
+                    {cart.map((product) => (
+                        <div key={product.name} className="singleProduct">
+                            <h3>{product.name}</h3>
+                            <h5>{getTotalQuantity(product.quantity)} = $ {sumQuantity(product.quantity)}</h5>
+                            <figure>
+                                <img src={catPlaceholder} alt={product.name} />
+                            </figure>
+                            <button onClick={() => removeItem(product.id)} className="delete">X</button>
                         </div>
-                }
+                    ))}
+                    <span>Total: $ { cart.reduce((acc, curr) => acc + sumQuantity(curr.quantity), 0) }</span>
+                    {
+                        cart.length > 0 && 
+                        <>
+                            <button onClick={clear}>Vaciar Carrito</button>
+                        </>
+                    }
+                    {
+                        cart.length === 0 && 
+                            <div>
+                                <p>No hay nada agregado al carrito todavía</p>
+                                <button onClick={() => navigate('/')} >Seguir viendo donaciones</button>
+                            </div>
+                    }
+                </div>
+                <form>
+                    <input name="name" type="text" placeholder="Nombre" value={formValue.name} onChange={handleInput} />
+                    <input name="phone" type="text" placeholder="Teléfono" value={formValue.phone} onChange={handleInput} />
+                    <input name="email" type="email" placeholder="Email" value={formValue.email} onChange={handleInput} />
+                    <button onClick={createOrder}>Completar donación</button> 
+                </form>
             </div>
-            <form>
-                <input type="text" placeholder="Nombre" value={formValue.name} onChange={handleInput} />
-                <input type="text" placeholder="Teléfono" value={formValue.phone} onChange={handleInput} />
-                <input type="email" placeholder="Email" value={formValue.email} onChange={handleInput} />
-                <button onClick={createOrder}>Completar donación</button> 
-            </form>
         </div>
     )
 };
